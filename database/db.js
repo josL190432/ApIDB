@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const MONGO_URL = "mongodb://localhost/ejercito";
+const MONGO_URL = "mongodb+srv://datamanGett:3466ymoGxapSwDew@suredata.tgpgo9b.mongodb.net/";
 
 const db = async () => {
   await mongoose

@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const Usuario = require("../model/usuario");
 
 const register = async (req, res) => {
-  const { nombre, correo, contraseña, cedula, cargo,rol,Unidad,EPS,Telefono,NombreEmergencia,TelefonoContacto } = req.body;
+  const {nombre,apellidos,correo,Telefono,contraseña,codigoUsuario,cargo,NumeroDeIdentificador,AgenciaDeSeguros,NumeroClienteAsignado,NumeroUsuarioVenta,ImagenLogo,IdUser } = req.body;
 
   Usuario.findOne({ correo }).then((usuario) => {
     if (usuario) {
@@ -15,16 +15,18 @@ const register = async (req, res) => {
         else {
           const nuevoUsuario = new Usuario({
             nombre,
+            apellidos,
             correo,
-            contraseña: contraseñaHasheada,
-            cedula,
-            cargo,
-            rol,
-            Unidad,
-            EPS,
             Telefono,
-            NombreEmergencia,
-            TelefonoContacto
+            contraseña,
+            codigoUsuario,
+            cargo,
+            NumeroDeIdentificador,
+            AgenciaDeSeguros,
+            NumeroClienteAsignado,
+            NumeroUsuarioVenta,
+            ImagenLogo,
+            IdUser
 
           });
 
