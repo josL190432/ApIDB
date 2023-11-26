@@ -18,5 +18,9 @@ const getUserById = async (req, res) => {
     res.json({ mensaje: "Estas enviando una contraseña incorrecta" });
   }
 };
+const getUser = async (req, res) => {
+  const costos = await prueba.find();
+  res.send(costos);
+};
 
 module.exports = getUserById;

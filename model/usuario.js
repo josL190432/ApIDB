@@ -2,21 +2,19 @@ const { model, Schema } = require("mongoose");
 
 const UsuarioSchema = new Schema({
   nombre: { type: String, required: true },
-  apellidos: { type: String, required: true },
-  correo: { type: String, required: true, unique: true },
-  Telefono:{type:String},
-  contraseña: { type: String, required: true },
-  codigoUsuario: { type: String},
-  cargo:{type:String},
-  NumeroDeIdentificador:{type:String},
-  AgenciaDeSeguros:{type:String},
-  NumeroClienteAsignado:{type:String},
-  NumeroUsuarioVenta:{type:String},
-  ImagenLogo:{type:String},
-  IdUser:{Type:String}
-  
-  
-  
+  ApeS: { type: String, required: true },
+  Email: { type: String, required: true, unique: true },
+  NTel:{type:String},
+  Pas: { type: String, required: true },
+  CPol: { type: String},
+  MPa:{
+    Ntar: { type:Number },
+    NDue:{type:String},
+    FVe:{type:String}
+  },
+  FRe:{type:String},
+  Tus:{type:String},
+ Img: { type:String }
 });
 
 module.exports = model("Usuario", UsuarioSchema);
