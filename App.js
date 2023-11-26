@@ -19,7 +19,6 @@ app.use(express.json());
 app.post("/register", controllers.register);
 app.post("/login", controllers.login);
 app.get("/user", controllers.getUserById);
-app.get("/user1", controllers.getUser);
 
 
 
