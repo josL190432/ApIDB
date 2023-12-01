@@ -1,5 +1,6 @@
 const { model, Schema } = require("mongoose");
 
+
 const UsuarioSchema = new Schema({
   nombre: { type: String},
   // ApeS: { type: String, required: true },
