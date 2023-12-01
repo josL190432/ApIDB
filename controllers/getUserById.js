@@ -2,7 +2,9 @@ const Usuario = require("../model/usuario");
 
 const getUserById = async (req, res) => {
   const costos = await Usuario.find();
-  res.send(costos);
+  res.json();
+  console.log(costos)
+  // res.send(costos);
   // const { id } = req.user;
 
   // if (id.length === 24) {
